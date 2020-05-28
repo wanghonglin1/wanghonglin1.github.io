@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>王洪林的博客</title>
+    <link>https://wanghonglin1.github.io/</link>
+    <description>Recent content on 王洪林的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 27 May 2020 01:54:25 +0800</lastBuildDate>
+    
+	<atom:link href="https://wanghonglin1.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>日记</title>
+      <link>https://wanghonglin1.github.io/diary/</link>
+      <pubDate>Wed, 27 May 2020 01:54:25 +0800</pubDate>
+      
+      <guid>https://wanghonglin1.github.io/diary/</guid>
+      <description>2020年 05月 27日 《水经注》是本好书！！！ 25日 ​ 居家隔离结束后的第一个工作日，早晨阳光明媚，念。 ☞ 病毒退散 24日 ​ 山外青山楼外楼，西湖歌舞几时休？ ​ 暖风熏得游人醉，只把杭州做汴州。 ​ ——【宋】林</description>
+    </item>
+    
+    <item>
+      <title>读书</title>
+      <link>https://wanghonglin1.github.io/book/</link>
+      <pubDate>Tue, 26 May 2020 01:51:21 +0800</pubDate>
+      
+      <guid>https://wanghonglin1.github.io/book/</guid>
+      <description>“致虚极，守静笃。万物并作，吾以观复！”——老子《道德经》 2020年 《美国大城市的死与生》 《人间失格》 《重返狼群》 《一看就停不下来的中国史》</description>
+    </item>
+    
+    <item>
+      <title>友链</title>
+      <link>https://wanghonglin1.github.io/link/</link>
+      <pubDate>Tue, 26 May 2020 01:35:16 +0800</pubDate>
+      
+      <guid>https://wanghonglin1.github.io/link/</guid>
+      <description>网址: https://honglinwang.com/</description>
+    </item>
+    
+    <item>
+      <title>关于</title>
+      <link>https://wanghonglin1.github.io/about/</link>
+      <pubDate>Fri, 22 May 2020 20:24:28 +0800</pubDate>
+      
+      <guid>https://wanghonglin1.github.io/about/</guid>
+      <description>关于我 一名计量工程师，闲暇时间学点知识，自得其乐。 可以通过以下方式联系到我： 邮箱：824194931@qq.com 网址：https://honglinwang.com 关于本站 本站建于2020年05月，</description>
+    </item>
+    
+    <item>
+      <title>药师灌顶真言</title>
+      <link>https://wanghonglin1.github.io/posts/chinese-preview/</link>
+      <pubDate>Thu, 11 Apr 2019 14:26:00 +0800</pubDate>
+      
+      <guid>https://wanghonglin1.github.io/posts/chinese-preview/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;修学药师灌顶真言是药师法门的一部分，读诵修持有着极大的功德利益&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;内容&#34;&gt;内容&lt;/h1&gt;
+&lt;p&gt;南无薄伽伐帝鞞杀社&lt;/p&gt;
+&lt;p&gt;窭噜薜琉璃&lt;/p&gt;
+&lt;p&gt;跋喇婆&lt;/p&gt;
+&lt;p&gt;喝啰阇也&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>日本語敬語体系</title>
+      <link>https://wanghonglin1.github.io/posts/japanese-preview/</link>
+      <pubDate>Wed, 10 Apr 2019 14:26:00 +0800</pubDate>
+      
+      <guid>https://wanghonglin1.github.io/posts/japanese-preview/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;日本語の敬語体系は、一般に、大きく尊敬語・謙譲語・丁寧語に分類される。文化審議会国語分科会は、2007年2月に「敬語の指針」を答申し、これに丁重語および美化語を含めた5分類を示している。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;尊敬語&#34;&gt;尊敬語&lt;/h1&gt;
+&lt;p&gt;尊敬語は、動作の主体を高めることで、主体への敬意を表す言い方である。動詞に「お（ご）～になる」を付けた形、また、助動詞「（ら）れる」を付けた形などが用いられる。たとえば、動詞「取る」の尊敬形として、「（先生が）お取りになる」「（先生が）取られる」などが用いられる。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Creating a New Theme</title>
+      <link>https://wanghonglin1.github.io/posts/english-preview/</link>
+      <pubDate>Mon, 01 Apr 2019 14:26:00 +0800</pubDate>
+      
+      <guid>https://wanghonglin1.github.io/posts/english-preview/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Theme Preview</title>
+      <link>https://wanghonglin1.github.io/posts/theme-preview/</link>
+      <pubDate>Sun, 31 Mar 2019 17:49:40 +0800</pubDate>
+      
+      <guid>https://wanghonglin1.github.io/posts/theme-preview/</guid>
+      <description>&lt;h1 id=&#34;headings&#34;&gt;Headings&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;# H1
+&lt;span style=&#34;color:#75715e&#34;&gt;## H2
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;### H3
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#### H4
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;##### H5
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;###### H6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
