@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-cn" >
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  
+  <meta name="author"
+        content="Zeuk"/>
+
+  
+  <meta name="description" content="上班以后大部分时间用不到功能特别强大的软件，但office却是形影不离。理工科或者会计等工作需要整合大量的数据表格，如果全靠复制粘贴会浪费大量时间，也非常辛苦。为了提高效率，我做了个小程序。如下图： 把"/>
+  
+
+  
+  
+  <meta name="keywords" content="Hugo, theme, zozo"/>
+  
+
+  
+  <link rel="canonical" href="https://wanghonglin1.github.io/posts/vba-sjzh/"/>
+
+  
+
+  <title>vba收集Excel文件信息的便捷操作 &middot; 心斋</title>
+
+  <link rel="shortcut icon" href="https://wanghonglin1.github.io/images/favicon.ico"/>
+  <link rel="stylesheet" href="https://wanghonglin1.github.io/css/animate.min.css"/>
+  <link rel="stylesheet" href="https://wanghonglin1.github.io/css/remixicon.css"/>
+  <link rel="stylesheet" href="https://wanghonglin1.github.io/css/zozo.css"/>
+  <link rel="stylesheet" href="https://wanghonglin1.github.io/css/highlight.css"/>
+
+  
+  
+ 
+ <script>
+    (function(d) {
+      var config = {
+        kitId: 'kfn1kkp',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+ 
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3c2e53e30042c2a346c1d2d9006067a7";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})(0);
+</script>
+</head>
+
+<body>
+<div class="main animated">
+  <div class="nav_container animated fadeInDown">
+  <div class="site_nav" id="site_nav">
+    <ul>
+      
+      <li>
+        <a href="/">首页</a>
+      </li>
+      
+      <li>
+        <a href="/posts/">归档</a>
+      </li>
+      
+      <li>
+        <a href="/tags/">标签</a>
+      </li>
+      
+      <li>
+        <a href="/book/">读书</a>
+      </li>
+      
+      <li>
+        <a href="/diary/">日记</a>
+      </li>
+      
+      <li>
+        <a href="/link/">友链</a>
+      </li>
+      
+      <li>
+        <a href="/about/">关于</a>
+      </li>
+      
+    </ul>
+  </div>
+  <div class="menu_icon">
+    <a id="menu_icon"><i class="remixicon-links-line"></i></a>
+  </div>
+</div>
+
+  <div class="header animated fadeInDown">
+  <div class="site_title_container">
+    <div class="site_title">
+      <h1>
+        <a href="https://wanghonglin1.github.io/">
+          <span>心斋</span>
+          <img src="https://wanghonglin1.github.io/images/xinzhai.svg"/>
+        </a>
+      </h1>
+    </div>
+    <div class="description">
+      <p class="sub_title">风该怎样吹</p>
+      <div class="my_socials">
+        
+        
+        <a href="https://book.douban.com/" title="book" target="_blank"><i class="remixicon-book-fill"></i></a>
+        
+        
+        
+        <a href="https://github.com/" title="github" target="_blank"><i class="remixicon-github-fill"></i></a>
+        
+        
+        
+        <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=824194931&amp;site=qq&amp;menu=yes" title="qq" target="_blank"><i class="remixicon-qq-fill"></i></a>
+        
+        
+        
+        <a href="https://weibo.com/2202904387/profile?topnav=1&amp;wvr=6&amp;is_all=1" title="weibo" target="_blank"><i class="remixicon-weibo-fill"></i></a>
+        
+        
+        
+        <a href="https://www.zhihu.com/follow" title="zhihu" target="_blank"><i class="remixicon-zhihu-fill"></i></a>
+        
+        
+        <a href="https://wanghonglin1.github.io/index.xml" type="application/rss+xml" title="rss" target="_blank"><i class="remixicon-rss-fill"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="content">
+    <div class="post_page">
+      <div class="post animated fadeInDown">
+        <div class="post_title post_detail_title">
+          <h2><a href='/posts/vba-sjzh/'>vba收集Excel文件信息的便捷操作</a></h2>
+          <span class="date">2020.06.03</span>
+        </div>
+        <div class="post_content markdown"><p>上班以后大部分时间用不到功能特别强大的软件，但office却是形影不离。理工科或者会计等工作需要整合大量的数据表格，如果全靠复制粘贴会浪费大量时间，也非常辛苦。为了提高效率，我做了个小程序。如下图：</p>
+<p><img src="https://honglinwang.com/img/20200603200259.PNG" alt=""></p>
+<p>把需要收集数据的Excel文件（格式相同）放置在一个文件夹里，点击”数据整合“按钮，即可输出一个整合后的表格文件。代码如下：</p>
+<pre><code>数据整合：
+Private Sub 数据整合_Click()
+Application.ScreenUpdating = False
+On Error GoTo 0
+Dim nYs%, nRow%, cTxt$, nBl#, Arr(), nCount%
+  Dim r%, m%
+  Dim ws As Worksheet
+  Dim wb As Workbook
+  Dim mypath$, myname$
+  Dim brr()
+  Dim f As Object
+  Dim n%
+   
+  Worksheets(&quot;数据库表&quot;).Range(&quot;2:65536&quot;).ClearContents
+  mypath = ThisWorkbook.Path &amp; &quot;\Excel文件集\&quot;
+  myname = Dir(mypath &amp; &quot;*.xlsx&quot;)
+      
+      ReDim Preserve brr(1 To 12, 1 To m)
+      brr(1, m) = Format(.Range(&quot;C2&quot;), &quot;'000000000000&quot;)
+      brr(2, m) = .Range(&quot;C3&quot;)
+      brr(3, m) = .Range(&quot;C5&quot;)
+      brr(4, m) = .Range(&quot;I3&quot;)
+      brr(5, m) = .Range(&quot;I4&quot;)
+      brr(6, m) = .Range(&quot;I5&quot;)
+      brr(7, m) = .Range(&quot;C8&quot;)
+      brr(8, m) = .Range(&quot;C4&quot;)
+      brr(9, m) = .Range(&quot;C64&quot;)
+      brr(10, m) = Format(.Range(&quot;C66&quot;), &quot;yyyy年mm月dd日&quot;)
+      brr(11, m) = Format(.Range(&quot;I66&quot;), &quot;yyyy年mm月dd日&quot;)
+      brr(12, m) = .Range(&quot;C65&quot;)
+      
+    End With
+    wb.Close
+    myname = Dir()
+  Loop
+  With Worksheets(&quot;数据库表&quot;)
+    r = .Cells(.Rows.Count, 1).End(xlUp).Row
+    .Range(&quot;a&quot; &amp; r + 1).Resize(UBound(brr, 2), UBound(brr)) = Application.Transpose(brr)
+  End With
+  Next
+  MsgBox &quot;数据收集完毕！！！&quot;, 0 + 48 + 256 + 0, &quot;提示：&quot;
+  
+         Sheets(&quot;数据库表&quot;).Select
+          Sheets(&quot;数据库表&quot;).Cells.Select
+           Selection.Copy
+            Sheets(&quot;数据库表&quot;).Copy
+       With ActiveWorkbook
+           .SaveAs Filename:=ThisWorkbook.Path &amp; &quot;\数据收集Excel\&quot; &amp; &quot;数据整合表&quot; &amp; Year(Now()) &amp; &quot;年&quot; &amp; Month(Now()) &amp; &quot;月&quot; &amp; Day(Now()) &amp; &quot;日&quot; &amp; Hour(Now()) &amp; &quot;时&quot; &amp; Minute(Now()) &amp; &quot;分&quot; &amp; Second(Now()) &amp; &quot;秒&quot; &amp; &quot;.xlsx&quot;
+            .Close
+         End With
+  MsgBox &quot;已生成“&quot; &amp; ThisWorkbook.Path &amp; &quot;\数据收集Excel\&quot; &amp; &quot;数据整合表&quot; &amp; Year(Now()) &amp; &quot;年&quot; &amp; Month(Now()) &amp; &quot;月&quot; &amp; Day(Now()) &amp; &quot;日&quot; &amp; Hour(Now()) &amp; &quot;时&quot; &amp; Minute(Now()) &amp; &quot;分&quot; &amp; Second(Now()) &amp; &quot;秒&quot; &amp; &quot;.xlsx&quot; &amp; &quot;”！&quot;, 0 + 48 + 256 + 0, &quot;提示：&quot;
+
+Application.ScreenUpdating = True
+End Sub
+</code></pre><p>经测算得知，每个Excel文件耗时约0.6s。文件较少时，点击“数据整合”按钮后程序很快就能够结束运行。但是当文件增加到20个以上，程序处理时间就达到了让人厌烦的程度，如果整合1000个Excel文件就需要花费10分钟，你也许会认为系统卡死了，那是想哭的心都有了。为了解决这个等待问题，我给程序添加了个进度条，这样就很直观的显示出了数据处理的进程，我们可以先做别的事情，等软件运行到100%再管他好了。</p>
+<pre><code>进度条：
+  For Each f In CreateObject(&quot;scripting.FileSystemObject&quot;).GetFolder(mypath).Files
+    If f.Name Like &quot;*.xlsx&quot; Then n = n + 1    '查看文件夹里.xlsx文件的数量
+  Next
+  
+   nYs = Int(Rnd * 6 + 1) '随机一个颜色号
+   
+For m = 0 To n
+  'm = 0
+  Do While myname &lt;&gt; &quot;&quot;
+    Set wb = GetObject(mypath &amp; myname)
+    With wb.Worksheets(1)
+      m = m + 1
+      
+      Me.Label1.ForeColor = Choose(nYs, 30720, 16711935, 16711680, 255, 32255, 16762880) '底层字体颜色
+    
+      '===========================================================进度条开始
+        nBl = m / n '进度百分比
+        With Me
+            Select Case nYs '进度条颜色
+                Case 1
+                    '绿色
+                    .Label2.BackColor = RGB(200 * (1 - nBl), 233 - 113 * nBl, 200 * (1 - nBl))
+                Case 2
+                    '粉
+                    .Label2.BackColor = RGB(245 - 80 * nBl, 210 * (1 - nBl), 245 - 80 * nBl)
+                Case 3
+                    '蓝色
+                    .Label2.BackColor = RGB(210 * (1 - nBl), 225 - 170 * nBl, 245 - 125 * nBl)
+                Case 4
+                    '红色
+                    .Label2.BackColor = RGB(255, 200 * (1 - nBl), 200 * (1 - nBl))
+                Case 5
+                    '棕色
+                    .Label2.BackColor = RGB(250, 230 - 95 * nBl, 200 * (1 - nBl))
+                Case 6
+                    '青色
+                    .Label2.BackColor = RGB(220 * (1 - nBl), 255 - 135 * nBl, 255 - 135 * nBl)
+            End Select
+            
+            .Label2.Width = 370 * nBl '进度条长度(370是总长度，设计时有变请修改）
+            .Label1.Caption = String(37, &quot; &quot;) &amp; Format(nBl, &quot;0%&quot;) '底层文字，前面的空格个数37根据实际修改
+            .Label3.Caption = .Label1.Caption '顶层文字
+            .Label3.Width = .Label2.Width '限制顶层文字显示宽度
+            
+        End With
+        'For j = 1 To 20 '延时，测试用，让进度条慢一点
+        'next
+        DoEvents '必须，否则进度条不显示过程
+</code></pre><p>程序还有很多不足，最急需解决的还是速度不够快的问题，如果大家有什么好的点子，还请不吝赐教！</p>
+<hr>
+<h4 id="参考资料">参考资料：</h4>
+<ul>
+<li>中文版Excel 2016高级VBA编程宝典（第8版）.[美]Michael Alexander</li>
+<li><a href="http://www.excelhome.net/">http://www.excelhome.net/</a></li>
+</ul>
+</div>
+        <div class="post_footer">
+          
+          <div class="meta">
+            <div class="info">
+              <span class="field tags">
+                <i class="remixicon-stack-line"></i>
+                
+                <a href="https://wanghonglin1.github.io/tags/%E4%B8%AD%E6%96%87/">中文</a>
+                
+                <a href="https://wanghonglin1.github.io/tags/%E8%BD%AF%E4%BB%B6/">软件</a>
+                
+                <a href="https://wanghonglin1.github.io/tags/%E5%8E%9F%E5%88%9B/">原创</a>
+                
+				<span id="busuanzi_container_page_pv">共<span id="busuanzi_value_page_pv"></span>次阅读</span>
+              </span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+      
+      
+<div class="doc_comments">
+  <div class="comments_block_title">发表评论</div>
+  <div id="vcomments"></div>
+</div>
+
+<link rel="stylesheet" href="https://wanghonglin1.github.io/css/comments.css"/>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+<script type="text/javascript">
+new Valine({
+  el: '#vcomments',
+  appId: 'fFrlkKI6cLsi70huJoPTntb6-gzGzoHsz',
+  appKey: 'fWiNS2hz4mc89Y1vJUptroD7',
+  placeholder: ' ',
+  visitor: 'true',
+})
+</script>
+
+      
+    </div>
+  </div>
+  <a id="back_to_top" href="#" class="back_to_top"><span>△</span></a>
+</div>
+<div class="disqus">
+</div>
+<footer class="footer">
+  <div class="powered_by">
+    <a href="https://zeuk.me">Designed by Zeuk,</a>
+    <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+	<p> © 2020–2020 风该怎样吹 | CC BY-NC 4.0 </p>
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span> |
+	<span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+  </div>
+  <div class="footer_slogan">
+    <span>山外青山楼外楼</span>
+  </div>
+</footer>
+
+
+
+<script src="https://wanghonglin1.github.io/js/jquery-3.3.1.min.js"></script>
+<script src="https://wanghonglin1.github.io/js/zozo.js"></script>
+<script src="https://wanghonglin1.github.io/js/highlight.pack.js"></script>
+<link  href="https://wanghonglin1.github.io/css/fancybox.min.css" rel="stylesheet">
+<script src="https://wanghonglin1.github.io/js/fancybox.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad()</script>
+
+
+  <script type="text/javascript" async src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+
+
+
+
+
+</body>
+</html>

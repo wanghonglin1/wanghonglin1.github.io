@@ -6,18 +6,18 @@
     <description>Recent content on 心斋</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 02 Jun 2020 20:55:25 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 26 May 2020 01:51:21 +0800</lastBuildDate>
     
 	<atom:link href="https://wanghonglin1.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>日记</title>
-      <link>https://wanghonglin1.github.io/diary/</link>
-      <pubDate>Tue, 02 Jun 2020 20:55:25 +0800</pubDate>
+      <title>vba收集Excel文件信息的便捷操作</title>
+      <link>https://wanghonglin1.github.io/posts/vba-sjzh/</link>
+      <pubDate>Wed, 03 Jun 2020 19:51:08 +0800</pubDate>
       
-      <guid>https://wanghonglin1.github.io/diary/</guid>
-      <description>2020年 06月 02日 更新转发国学一篇。才疏学浅，原创内容请容我慢慢写来！ 05月 29日 留言功能上线咯！美好的周末即将开始，你准备好了吗？ 27日 《水经注》是本好书！！！ 25日 ​ 居家隔离结束后的第一个工作</description>
+      <guid>https://wanghonglin1.github.io/posts/vba-sjzh/</guid>
+      <description>上班以后大部分时间用不到功能特别强大的软件，但office却是形影不离。理工科或者会计等工作需要整合大量的数据表格，如果全靠复制粘贴会浪费大量时间，也非常辛苦。为了提高效率，我做了个小程序。如下图： 把</description>
     </item>
     
     <item>
